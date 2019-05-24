@@ -11,9 +11,11 @@ import dogsReducer from './reducers/dogs-reducer';
 import  { TempForm, TempErrorMessage } from './containers/HeaderContainer';
 import ImagesListContainer from'./containers/ImagesListContainer';
 
+const state = { images: [], success: true }
+
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const store = createStore(
-  dogsReducer,
+  dogsReducer, state,
   composeEnhancers(applyMiddleware(thunk))
 );
 

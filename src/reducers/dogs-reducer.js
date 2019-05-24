@@ -1,9 +1,16 @@
-const dogsReducer = (state = [], action) =>{
+const dogsReducer = (state, action) =>{
   switch(action.type){
     case 'ADD_IMAGE':
-      return [...state, action.image]
+      return {
+        images:[...state.images,action.image],
+        success: true
+      }
     case 'NO_IMAGE':
-      return
+      return {
+        images: state.images,
+        success: false
+      }
+
     default:
       return state
   }

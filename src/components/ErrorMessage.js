@@ -3,7 +3,7 @@ import React from 'react';
 const ErrorMessage = (props) => {
   console.log(props);
 
-  if (props.status === 'success'){
+  if (props.status === true){
     return null
   }else{
     return (

@@ -20,7 +20,9 @@ const mapDispatchToProps = (dispatch) =>({
             image
           })
         } else {
-          console.log('NO IMAGE');
+          dispatch({
+            type: 'NO_IMAGE',
+          })
         }
       })
     })
@@ -30,9 +32,5 @@ const mapDispatchToProps = (dispatch) =>({
 
 const TempForm = connect(null, mapDispatchToProps)(Form)
 const TempErrorMessage = connect(mapStateToProps)(ErrorMessage)
-
-
-const simple = 'simple'
-const simple2 = 'simple2'
 
 export { TempForm, TempErrorMessage };

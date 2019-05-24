@@ -3,7 +3,7 @@ import ImageList from '../components/ImageList';
 
 const mapStateToProps = (state) => {
   return {
-    images: state
+    images: state.images
   };
 };
 
